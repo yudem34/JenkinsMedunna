@@ -67,7 +67,7 @@ public class Ali {
     @FindBy (xpath = "//*[@id=\"save-entity\"]")
     public WebElement editMessageSave;
 
-    @FindBy (xpath = "//span[normalize-space()='Country']")
+    @FindBy (xpath = "//*[span='Country']")
     public WebElement countryButton;
 
     @FindBy (xpath = "//*[@id=\"jh-create-entity\"]")

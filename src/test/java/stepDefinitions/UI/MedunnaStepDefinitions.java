@@ -32,18 +32,19 @@ public class MedunnaStepDefinitions {
     @And("Admin gecerli bir Username girer")
     public void adminGecerliBirUsernameGirer() throws InterruptedException {
         medunna.usernameBox.sendKeys(ConfigReader.getProperty("username"));
-        Thread.sleep(2);
+        Thread.sleep(1000);
     }
 
     @And("Admin gecerli bir password girer")
     public void adminGecerliBirPasswordGirer() throws InterruptedException {
         medunna.passwordBox.sendKeys(ConfigReader.getProperty("password"));
-        Thread.sleep(2);
+        Thread.sleep(1000);
     }
 
     @And("Sign in butonuna tiklar")
-    public void signInButonunaTiklar() {
+    public void signInButonunaTiklar() throws InterruptedException {
         medunna.singinButonu.click();
+        Thread.sleep(1000);
     }
 
     @And("Sayfayi kapatir")

@@ -103,14 +103,6 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 
-
-        <!--org.projectlombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>                            <!-- API -->
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <scope>provided</scope>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
         <dependency>
             <groupId>io.cucumber</groupId>

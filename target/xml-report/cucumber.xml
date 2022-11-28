@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="93.247">
+    <testcase classname="US_28 Ulke Olusturma ve Silme" name="Admin ulke olusturabilmeli ve Silebilmeli" time="92.738">
+        <system-out>
+            <![CDATA[Given Admin www.medunna.com adresine gider..................................passed
+When Giris yap simgesine ve acilan menude Sign-in secenegine tiklar.........passed
+And Admin gecerli bir Username girer........................................passed
+And Admin gecerli bir password girer........................................passed
+And Sign in butonuna tiklar.................................................passed
+And items&titles bolumu acilir..............................................passed
+And Country secenegine tiklar...............................................passed
+And Create a new Country butonuna tiklar....................................passed
+Then Name kismina ulke adini girer..........................................passed
+And Country-save butonuna  tiklar...........................................passed
+And Ulke kaydinin basarili sekilde yapildigini dogrular.....................passed
+And Admin ulke silebilmeli..................................................passed
+Then Silmek istedigi ulkenin Delete butonuna tiklar.........................passed
+And Delete butonuna basma istegini confirm eder.............................passed
+Then Ulkenin basariyla silindigini dogrular.................................passed
+Then Sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

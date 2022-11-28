@@ -41,7 +41,7 @@ public class Fatih {
         js.executeScript("arguments[0].click();", fatihPage.editButton);
     }
 
-    @And("Doktor “Create or Edit an Appointment” yazisinin gorunur oldugunu dogrular.")
+    @And("Doktor Create or Edit an Appointment yazisinin gorunur oldugunu dogrular")
     public void doktorCreateOrEditAnAppointmentYazisininGorunurOldugunuDogrular() {
         assertTrue(fatihPage.createOrEditAppointment.isDisplayed());
     }
@@ -62,7 +62,7 @@ public class Fatih {
         }
     }
 
-    @And("Doktor “id, start date, end date, Status, physician” bilgilerinin gorunur oldugunu dogrular.")
+    @And("Doktor id, start date, end date, Status, physician bilgilerinin gorunur oldugunu dogrular")
     public void doktorIdStartDateEndDateStatusPhysicianBilgilerininGorunurOldugunuDogrular() throws AWTException {
         Robot robot = new Robot();
         for (int i = 0; i < 1; i++) {
@@ -87,7 +87,7 @@ public class Fatih {
         assertTrue(fatihPage.physicianText.isDisplayed());
     }
 
-    @And("Doktor,  Anamnesis, Treatment ve Diagnosis alanlarinin alt kisimlarinda “This field is required.” uyari yazisinin belirdigini ve bu nedenle bu alanlarin bos birakilamayacagini dogrular.")
+    @And("Doktor,  Anamnesis, Treatment ve Diagnosis alanlarinin alt kisimlarinda This field is required uyari yazisinin belirdigini ve bu nedenle bu alanlarin bos birakilamayacagini dogrular")
     public void doktorAnamnesisTreatmentVeDiagnosisAlanlarininAltKisimlarindaThisFieldIsRequiredUyariYazisininBelirdiginiVeBuNedenleBuAlanlarinBosBirakilamayacaginiDogrular() throws AWTException {
 
         ReusableMethods.waitFor(3);
@@ -110,7 +110,7 @@ public class Fatih {
         ReusableMethods.waitFor(2);
     }
 
-    @And("Ayni durumda “Prescription” ve “Description” alanlarinin alt kisminda “This field is required.” uyarisinin yer almadigini ve bu nedenle bu alanlarin bos birkilabilecegini dogrular.")
+    @And("Ayni durumda Prescription ve Description alanlarinin alt kisminda This field is required. uyarisinin yer almadigini ve bu nedenle bu alanlarin bos birkilabilecegini dogrular.")
     public void ayniDurumdaPrescriptionVeDescriptionAlanlarininAltKismindaThisFieldIsRequiredUyarisininYerAlmadiginiVeBuNedenleBuAlanlarinBosBirkilabileceginiDogrular() {
     }
 
@@ -129,7 +129,7 @@ public class Fatih {
         actions.moveToElement(fatihPage.editButton3).click().perform();
     }
 
-    @And("Doktor “Status” alanina tiklayarak {string} seceneklerinden birini secer.")
+    @And("Doktor Status alanina tiklayarak {string} seceneklerinden birini secer.")
     public void doktorStatusAlaninaTiklayarakSeceneklerindenBiriniSecer(String arg0) {
 
         actions.moveToElement(fatihPage.statusBox).click().perform();
@@ -139,7 +139,7 @@ public class Fatih {
     }
 
 
-    @And("Acilan ekranda “Glucose, Urea, Creatinine, Sodium Potassium, Total protein, Albumin, Hemoglobin\" Seceneklerini bulup sag kisimlarinda yer alan kutucuklari isaretler.")
+    @And("Acilan ekranda Glucose, Urea, Creatinine, Sodium Potassium, Total protein, Albumin, Hemoglobin\" Seceneklerini bulup sag kisimlarinda yer alan kutucuklari isaretler.")
     public void acilanEkrandaGlucoseUreaCreatinineSodiumPotassiumTotalProteinAlbuminHemoglobinSecenekleriniBulupSagKisimlarindaYerAlanKutucuklariIsaretler() throws Throwable {    // Write code here that turns the phrase above into concrete actions    throw new cucumber.api.PendingException();
 
         js.executeScript("arguments[0].click();", fatihPage.testUrea);
@@ -189,7 +189,7 @@ public class Fatih {
 //   >>>    US013 TC001
 
 
-    @And("Staff “My Pages” butonuna ve ardindan “Search Patient” butonuna tiklar")
+    @And("Staff My Pages butonuna ve ardindan Search Patient butonuna tiklar")
     public void staffMyPagesButonunaVeArdindanSearchPatientButonunaTiklar() {
         actions.moveToElement(fatihPage.myPagesButton).click().moveToElement(fatihPage.searchPatientButton).click().perform();
     }
@@ -246,14 +246,14 @@ public class Fatih {
     }
 
 
-    @And("Acilan ekranda “View Results” Butonuna tklar.")
+    @And("Acilan ekranda View Results Butonuna tklar.")
     public void acilanEkrandaViewResultsButonunaTklar() {
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click()", fatihPage.viewResultsDoctorButton);
 
     }
 
-    @And("Doktor “default max  value, default min value,  test, description and the date” Bilgilerinin goruntulendigini dogrular.")
+    @And("Doktor default max  value, default min value,  test, description and the date Bilgilerinin goruntulendigini dogrular.")
     public void doktorDefaultMaxValueDefaultMinValueTestDescriptionAndTheDateBilgilerininGoruntulendiginiDogrular() {
         for (WebElement w : fatihPage.doctorListAssertion) {
             assertTrue(w.isDisplayed());
@@ -282,7 +282,7 @@ public class Fatih {
 //>>>>   US013 TC002>>>>
 
 
-    @And("Acilan ekranda “Request Impatient” Butonuna tklar.")
+    @And("Acilan ekranda Request Impatient Butonuna tklar.")
     public void acilanEkrandaRequestImpatientButonunaTklar() {
         ReusableMethods.waitFor(2);
         fatihPage.requestInpatient.click();
@@ -295,7 +295,7 @@ public class Fatih {
         assertTrue(fatihPage.reqInpatSuccess.isDisplayed());
     }
     //   US14_TC001    >>>>>
-    @And("Doktor “My Pages” butonuna ve ardindan “My Inpatients” butonuna tiklar")
+    @And("Doktor My Pages butonuna ve ardindan My Inpatients butonuna tiklar")
     public void doktorMyPagesButonunaVeArdindanMyInpatientsButonunaTiklar() {
 
         js.executeScript("arguments[0].scrollIntoView(true);", fatihPage.myInpatientsButton);

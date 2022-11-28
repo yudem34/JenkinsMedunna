@@ -28,15 +28,12 @@ public class Ali {
     LoginPage medunna = new LoginPage();
     pages.Ali homepage=new pages.Ali();
     Faker faker=new Faker();
-    static String country="YeniCountryAli";
-
-
-
+    static String country="YeniCountryTeam21Project";
 
     @And("items&titles bolumu acilir")
-    public void itemsTitlesBolumuAcilir() {
+    public void itemsTitlesBolumuAcilir() throws InterruptedException {
         homepage.itemsTitles.click();
-
+        Thread.sleep(2000);
     }
 
     @And("Messages bolumune girilir")
@@ -45,7 +42,7 @@ public class Ali {
     }
 
     @And("ID-Name-Email-Subject-Message bolumlerinin gorunebilirligi test edilir")
-    public void ıdNameEmailSubjectMessageBolumlerininGorunebilirligiTestEdilir() {
+    public void idNameEmailSubjectMessageBolumlerininGorunebilirligiTestEdilir() {
 
         Assert.assertTrue(homepage.messagesID.isDisplayed());
         Assert.assertTrue(homepage.messagesName.isDisplayed());
@@ -117,26 +114,17 @@ public class Ali {
     }
 
     @And("Country secenegine tiklar")
-    public void countrySecenegineTiklar() {
+    public void countrySecenegineTiklar() throws InterruptedException {
         homepage.countryButton.click();
-
-
     }
 
     @Then("Silmek istedigi ulkenin Delete butonuna tiklar")
-    public void silmekIstedigiUlkeninDeleteButonunaTiklar() {
+    public void silmekIstedigiUlkeninDeleteButonunaTiklar() throws InterruptedException {
         List<String> countries=new ArrayList<>();
         for (WebElement each:homepage.countryList) {
             countries.add(each.getText());
-
         }
-
-        //(//*[text()='Delete'])
-            /*
-            js.executeScript("arguments[0].scrollIntoView(true);", Driver.getDriver().findElement(By.xpath("(//*[@type='checkbox'])" + "[" + (i + 1) + "]")));
-js.executeScript("arguments[0].click();", Driver.getDriver().findElement(By.xpath("(//*[@type='checkbox'])" + "[" + (i + 1) + "]")));
-             */
-
+        Thread.sleep(2000);
         for (int i = 0; i <countries.size() ; i++) {
             if (countries.get(i).equals(country)){
 
@@ -144,30 +132,33 @@ js.executeScript("arguments[0].click();", Driver.getDriver().findElement(By.xpat
                 js.executeScript("arguments[0].click();", Driver.getDriver().findElement(By.xpath("(//*[text()='Delete'])" + "[" + (i + 1) + "]")));
 
             }
-
         }
-
+        Thread.sleep(2000);
 
     }
 
     @And("Create a new Country butonuna tiklar")
-    public void createANewCountryButonunaTiklar() {
+    public void createANewCountryButonunaTiklar() throws InterruptedException {
         homepage.newCountryButton.click();
+        Thread.sleep(1000);
     }
 
     @Then("Name kismina ulke adini girer")
-    public void nameKisminaUlkeAdiniGirer() {
+    public void nameKisminaUlkeAdiniGirer() throws InterruptedException {
         homepage.newCountryNameButton.sendKeys(country);
+        Thread.sleep(1000);
     }
 
     @And("Country-save butonuna  tiklar")
-    public void countrySaveButonunaTiklar() {
+    public void countrySaveButonunaTiklar() throws InterruptedException {
         homepage.countrySaveButton.click();
+        Thread.sleep(1000);
     }
 
     @And("Ulke kaydinin basarili sekilde yapildigini dogrular")
-    public void ulkeKaydininBasariliSekildeYapildiginiDogrular() {
+    public void ulkeKaydininBasariliSekildeYapildiginiDogrular() throws InterruptedException {
         Assert.assertTrue(homepage.onayYazisi.isDisplayed());
+        Thread.sleep(1000);
     }
 
     @And("Delete butonuna basma istegini confirm eder")
@@ -177,16 +168,23 @@ js.executeScript("arguments[0].click();", Driver.getDriver().findElement(By.xpat
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER).perform();
+        Thread.sleep(2000);
     }
 
-    @Then("ulkenin basariyla silindigini dogrular")
-    public void ulkeninBasariylaSilindiginiDogrular() {
+    @Then("Ulkenin basariyla silindigini dogrular")
+    public void UlkeninBasariylaSilindiginiDogrular() throws InterruptedException {
         Assert.assertTrue(homepage.onayYazisi.isDisplayed());
+        Thread.sleep(2000);
     }
 
     @When("{int} saniye bekleme")
     public void saniyeBekleme(int millis) throws InterruptedException {
         Thread.sleep(millis*2000);
+    }
+
+    @And("Admin ulke silebilmeli")
+    public void adminUlkeSilebilmeli() throws InterruptedException {
+        Thread.sleep(1000);
     }
 }
 

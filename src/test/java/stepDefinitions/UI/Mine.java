@@ -288,7 +288,7 @@ public class Mine {
 
     }
     @Given("Kullanici Patient oturum açma icin Sign in'e tiklar")
-    public void kullanici_patient_oturum_açma_icin_sign_in_e_tiklar() {
+    public void kullanici_patient_oturum_acma_icin_sign_in_e_tiklar() {
         ReusableMethods.waitFor(3);
         medunnam.simge.click();
         medunnam.sign.click();
