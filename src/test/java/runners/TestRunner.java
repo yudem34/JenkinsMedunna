@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
         plugin={"pretty","html:target/cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml" },
-        features = "src/test/resources/UI",
+        features = "src/test/resources/",
         glue = "stepDefinitions",
-        tags = "@SmokeTest",
+        tags = "@Api_Test",
         dryRun = false
 )
 
